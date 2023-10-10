@@ -1,0 +1,33 @@
+name: Build KNIME Extentions
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        knime_version: ['4.6', '4.7']
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Miniconda
+      uses: conda-incubator/setup-miniconda@v2
+      with:
+        activate-environment: knime-ext-bundling
+        environment-file: environment.yml
+        python-version: 3.8
+        auto-activate-base: false
+
+    - name: Install knime-extension-bundling
+      run: |
+        conda create -n knime-ext-bundling -c "knime/label/nightly" -c conda-forge knime-extension-bundling
+        conda activate knime-ext-bundling
+
+    - name: Run build_python_extension script for KNIME ${{ matrix.knime_version }}
+      run: |
+        conda activate knime-ext-bundling
+        python build_python_extension.py --knime-version ${{ matrix.knime_version }} molcompass molcompass_build_${{ matrix.knime_version }}
