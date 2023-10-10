@@ -1,4 +1,3 @@
-# MolCompassKnimeNode
 The KNIME node for MolCompass project
 =======
 ### Introduction
@@ -12,7 +11,7 @@ The KNIME node for MolCompass project
 <br>
 
 ## Access 
-This KNIME workflow is build automatically, using GitHub Actions. You can
+This KNIME workflow is built automatically using GitHub Actions. You can
 download builds from ...
 ## Building from scratch 
 
@@ -38,15 +37,20 @@ To build `MolCompassKnime` from scratch, follow the instructions below:
 
 Using `MolCompassKnime` is straightforward. After building and installing the extension, you can incorporate it into your KNIME workflows.
 
-### Step 1: Importing the Extension
-Start by importing the `MolCompassKnime` extension into your KNIME workspace.
+### Minimal Workflow
+Drag and drop the `MolCompassKnime` node into your workflow. Connect it with, for example, a CSV reader and read a dataset.
+You can find the example in `workflows` folder. 
 
-### Step 2: Minimal Workflow
-Drag and drop the `MolCompassKnime` node into your workflow. Connect it with a
-,for example, CSV reader and read a dataset. 
-
+<img src="https://github.com/sergsb/MolCompassKnimeNode/assets/4963384/80796c17-c1ac-4114-bf7a-c3cb417455fb" alt="drawing" width="200"/>
 
 <br>
+
+
+### Advanced Workflow
+<img src="https://github.com/sergsb/MolCompassKnimeNode/assets/4963384/e2a60ba6-600f-4378-8f10-e2968fa0373d" alt="drawing" width="500"/>
+<br>
+
+<img src="https://github.com/sergsb/MolCompassKnimeNode/assets/4963384/ddec71d5-f7bd-4881-9257-77049d244e14" alt="drawing" width="300"/>
 
 ## Support
 
