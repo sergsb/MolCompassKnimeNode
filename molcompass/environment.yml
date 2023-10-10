@@ -1,0 +1,16 @@
+name: molcompass_env_internal
+channels:
+  - knime
+  - conda-forge
+dependencies:
+  - packaging
+  - python
+  - knime-extension
+  - knime-python-base
+  - numpy
+  - pip:
+    - molcomplib    
+    - matplotlib === 3.5.2
+
+
+

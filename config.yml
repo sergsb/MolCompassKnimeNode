@@ -1,0 +1,4 @@
+at.ac.univie.pharminfo.molcompass: # {group_id}.{name} from the knime.yml
+  src: /home/sergeyadmin/projects/molCompassKnimeNode/molcompass/ # Path to folder containing the extension files
+  conda_env_path: /home/sergeyadmin/miniconda3/envs/molcompass_env # Path to the Python environment to use
+  debug_mode: false # Optional line, if set to true, it will always use the latest changes of execute/configure, when that method is used within the KNIME Analytics Platform

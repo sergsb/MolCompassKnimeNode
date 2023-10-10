@@ -1,0 +1,10 @@
+name: molcompass # Will be concatenated with the group_id to an ID
+author: Sergey Sosnin
+env_yml_path: environment.yml
+extension_module: molcompass_extension # The .py Python module containing the nodes of your extension
+description: MolCompass  # Human readable bundle name / description
+long_description: MolCompass is an advanced tool designed for navigating chemical space. Utilizing a pre-trained parametric t-SNE model, this library generates 2D coordinates for molecules, providing a visualization of molecular clusters. 
+group_id: at.ac.univie.pharminfo 
+version: 0.1.0 # Version of this Python node extension
+vendor: University of Vienna, Pharmacoinformatics Research Group.
+license_file: LICENSE.TXT # Best practice: put your LICENSE.TXT next to the knime.yml; otherwise you would need to change to path/to/LICENSE.txt
