@@ -10,9 +10,6 @@ The KNIME node for MolCompass project
 <br>
 <br>
 
-## Access 
-This KNIME workflow is built automatically using GitHub Actions. You can
-download builds from ...
 ## Building from scratch 
 
 To build `MolCompassKnime` from scratch, follow the instructions below:
