@@ -1,48 +1,48 @@
-name: Run knime-ext-bundling and build_python_extension
+name: Build MolCompassKnimeNode
 
 on:
   workflow_dispatch:
+    inputs:
+      knime_version:
+        description: 'KNIME Version'
+        required: true
+        default: '4.4.2' # Set a default version or remove if you want it to be purely dynamic
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    
     strategy:
       matrix:
-        knime_version: ['4.6', '4.7']
-    
+        knime_version: ['4.3.0', '4.4.0', '4.5.0']  # Example versions, adjust as necessary
+
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Setup Miniconda
-      uses: conda-incubator/setup-miniconda@v2
-      with:
-        auto-activate-base: true
-        python-version: 3.8
+      - name: Setup Miniconda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          auto-activate-base: true
+          python-version: 3.8
 
-    - name: Install knime-extension-bundling
-      run: |
-        conda create -n knime-ext-bundling -c "knime/label/nightly" -c conda-forge knime-extension-bundling
-        conda activate knime-ext-bundling
-      shell: bash -l {0}
+      - name: Install knime-extension-bundling
+        run: |
+          conda create -n knime-ext-bundling -c knime -c conda-forge knime-extension-bundling
+          conda activate knime-ext-bundling
+        shell: bash -l {0}
 
-    - name: Run build_python_extension script for KNIME ${{ matrix.knime_version }}
-      run: |
-        conda activate knime-ext-bundling
-        python build_python_extension.py --knime-version ${{ matrix.knime_version }} molcompass molcompass_build_${{ matrix.knime_version }}
-      shell: bash -l {0}
+      - name: Run build_python_extension script for KNIME ${{ matrix.knime_version }}
+        run: |
+          conda activate knime-ext-bundling
+          python build_python_extension.py --knime-version ${{ matrix.knime_version }} molcompass molcompass_build_${{ matrix.knime_version }}
+        shell: bash -l {0}
 
-    - name: Zip the results
-      run: zip -r molcompass_build_${{ matrix.knime_version }}.zip molcompass_build_${{ matrix.knime_version }}
+      - name: Zip the results
+        run: zip -r molcompass_build_${{ matrix.knime_version }}.zip molcompass_build_${{ matrix.knime_version }}
 
-    - name: Upload the zip artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: molcompass_build_${{ matrix.knime_version }}_artifact
-        path: molcompass_build_${{ matrix.knime_version }}.zip
-
-
-    - name: Run build_python_extension script for KNIME ${{ matrix.knime_version }}
-      run: |
-        conda activate knime-ext-bundling
-        python build_python_extension.py --knime-version ${{ matrix.knime_version }} molcompass molcompass_build_${{ matrix.knime_version }}
+      - name: Upload the zip artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: molcompass_build_${{ matrix.knime_version }}_artifact
+          path: molcompass_build_${{ matrix.knime_version }}.zip
