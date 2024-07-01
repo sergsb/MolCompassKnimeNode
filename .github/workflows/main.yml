@@ -6,7 +6,7 @@ on:
       knime_version:
         description: 'KNIME Version'
         required: true
-        default: '4.7'
+        default: '5.2'
 
 jobs:
   build:
