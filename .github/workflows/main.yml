@@ -28,7 +28,7 @@ jobs:
 
       - name: Install knime-extension-bundling
         run: |
-          conda create -n knime-ext-bundling -c knime -c conda-forge knime-extension-bundling
+          conda create -n knime-ext-bundling -c knime -c conda-forge knime-extension-bundling=${{ matrix.knime_version }}
           conda activate knime-ext-bundling
         shell: bash -l {0}
 
