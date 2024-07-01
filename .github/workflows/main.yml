@@ -6,7 +6,7 @@ on:
       knime_version:
         description: 'KNIME Version'
         required: true
-        default: '4.7' # Set a default version or remove if you want it to be purely dynamic
+        default: '4.7'
 
 jobs:
   build:
@@ -14,7 +14,7 @@ jobs:
     
     strategy:
       matrix:
-        knime_version: ['4.6', '4.7', '5.2']  # Example versions, adjust as necessary
+        knime_version: ['5.2'] 
 
     steps:
       - name: Checkout code
