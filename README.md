@@ -23,6 +23,8 @@ To install `MolCompassKnime` from Zenodo, follow the instructions below:
 6. Select the extension and click on `Next`.
 7. Follow the instructions to install the extension.
 8. Restart KNIME Analytics Platform.
+![ezgif-3-564fdc497c](https://github.com/sergsb/MolCompassKnimeNode/assets/4963384/9b13fc98-2618-4687-8e03-0e81dd4269af)
+
 
 
 ### Building from scratch (optional, recommended only for developers)
