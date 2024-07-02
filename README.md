@@ -17,7 +17,7 @@ The KNIME node for MolCompass project
 To install `MolCompassKnime` from Zenodo, follow the instructions below:
 1. Download the pre-compiled zip archive  for your KNIME version from Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.12624633.svg)](https://doi.org/10.5281/zenodo.12624633)
 2. Open KNIME Analytics Platform.
-3. Click on the `File` menu and select `Install KNIME Extensions`.
+3. Click on the `Help` menu and select `Install New Software`.
 4. Click on `Add` and select `Local` to add the downloaded extension.
 5. Select the path to the folder containing the extension and click on `OK`.
 6. Select the extension and click on `Next`.
