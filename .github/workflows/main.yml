@@ -1,4 +1,4 @@
-name: Build MolCompassKnimeNode
+name: Build MolCompassKnimeNode (5.2)
 
 on:
   workflow_dispatch:
