@@ -9,10 +9,11 @@ The KNIME node for MolCompass project
 
 <br>
 <br>
+
 ## Installation
 
 
-## Installation from pre-build package (recommended)
+### Installation from pre-build package (recommended)
 To install `MolCompassKnime` from Zenodo, follow the instructions below:
 1. Download the pre-compiled zip archive  for your KNIME version from Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.12624633.svg)](https://doi.org/10.5281/zenodo.12624633)
 2. Open KNIME Analytics Platform.
@@ -24,7 +25,7 @@ To install `MolCompassKnime` from Zenodo, follow the instructions below:
 8. Restart KNIME Analytics Platform.
 
 
-## Building from scratch (optional, recommended only for developers)
+### Building from scratch (optional, recommended only for developers)
 
 To build `MolCompassKnime` from scratch, follow the instructions below:
 
