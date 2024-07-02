@@ -72,8 +72,4 @@ sergey.sosnin@univie.ac.at
 
 <br>
 
-## ToDo
-
-Automatic build using GitHub Actions and Packaging. 
-<br>
 
