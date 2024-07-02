@@ -14,7 +14,7 @@ jobs:
     
     strategy:
       matrix:
-        knime_version: ['4.6','4.7','5.2'] 
+        knime_version: ['5.2'] 
 
     steps:
       - name: Checkout code
